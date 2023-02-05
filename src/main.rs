@@ -34,7 +34,7 @@ struct Crear {
     /// Nombre del usuario
     #[arg(short, long)]
     nombre: String,
-    // Segundo nombre del usuario
+    /// Segundo nombre del usuario
     #[arg(short, long)]
     segundo_nombre: Option<String>,
     /// Apellido del usuario
