@@ -48,12 +48,12 @@ struct Crear {
 fn main() {
     let usuarios = Usuario::parse();
 
-    match &usuarios.crear {
+    match usuarios.crear {
         CrearUsuario::Crear(usuario) => {
             if usuario.segundo_nombre != None {
                 println!(
                     "Nombre: {}\nSegundo nombre: {}\nApellido: {}\nEdad: {}",
-                    usuario.nombre, usuario.segundo_nombre.as_ref().unwrap(), usuario.apellido, usuario.edad
+                    usuario.nombre, usuario.segundo_nombre.unwrap(), usuario.apellido, usuario.edad
                 )
             } else {
                 println!(
